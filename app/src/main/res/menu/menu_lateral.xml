@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Componentes"
+        android:id="@+id/componentesMenuItem">
+        <menu>
+            <item android:id="@+id/placasbase"
+                android:title="Placas base"/>
+            <item android:id="@+id/procesadores"
+                android:title="Procesadores"/>
+            <item android:id="@+id/discosduros"
+                android:title="Discos duros"/>
+            <item android:id="@+id/fuentesdealimentacion"
+                android:title="Fuentes de alimentacion"/>
+            <item android:id="@+id/tarjetasgraficas"
+                android:title="Tarjetas grafica"/>
+            <item android:id="@+id/memoriaRam"
+                android:title="Memoria RAM"/>
+            <item android:id="@+id/torres"
+                android:title="Torres"/>
+            <item android:id="@+id/tarjetasdesonido"
+                android:title="Tarjetas de Sonido"/>
+            <item android:id="@+id/lectoresdediscos"
+                android:title="Lectores de Discos"/>
+
+        </menu>
+    </item>
+    <item android:title="Ordenadores"
+        android:id="@+id/ordenadores">
+        <menu>
+            <item android:id="@+id/portatiles"
+                android:title="Placas base"/>
+            <item android:id="@+id/sobremesa"
+                android:title="Procesadores"/>
+            <item android:id="@+id/todoenuno"
+                android:title="Discos duros"/>
+        </menu>
+    </item>
+
+
+
+</menu>

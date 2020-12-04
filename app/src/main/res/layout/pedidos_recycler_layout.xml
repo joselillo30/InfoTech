@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_border"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fecha_realizado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realizado: 21/05/2020"/>
+
+
+        <TextView
+            android:id="@+id/numeroPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nº de pedido: 111111"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Entrega"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/entregaPrevista"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrega prevista: 23/05/2020"/>
+        <TextView
+            android:id="@+id/estadoPedido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Estado: ALMACEN"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center_vertical|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_direction_right"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

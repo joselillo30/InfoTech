@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Datos personales"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/nombreapellidosCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jose Llorca Martinez"/>
+            <TextView
+                android:id="@+id/telefonoResumen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tlf: 666666666" />
+            <TextView
+                android:id="@+id/direccionCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C\\Quintana, 19, Esc A, 1º Piso, Puerta 4"/>
+            <TextView
+                android:id="@+id/codpostalCiudadCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="03570, Villajoyosa"/>
+            <TextView
+                android:id="@+id/provinciaPaisCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alicante, España"/>
+            <TextView
+                android:id="@+id/cambiarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cambiar >"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <TextView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Método de entrega"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/radiobuttons"
+            android:background="@color/white"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/envioADomicilio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#000000"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/ic_local_shipping"
+                    android:drawablePadding="10dp"
+                    android:text="Entrega a domicilio (Direccion actual)" />
+
+                <RadioButton
+                    android:id="@+id/recogidaEnCorreos"
+                    android:drawableLeft="@drawable/ic_local_postoffice"
+                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#000000"
+                    android:text="Recogida en correos" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/transportista"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+                <TextView
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entrega a domicilio"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escoge al transportista"/>
+                <Spinner
+                    android:id="@+id/transportistasSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/informacionCorreosCarrito"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+            <TextView
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recogida en correos"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direccion del departamento de correos"/>
+            <EditText
+                android:id="@+id/direccionCorreos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Direccion Correos"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Localidad"/>
+                    <EditText
+                        android:id="@+id/localidadCorreos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Localidad"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.7"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Provincia"/>
+                    <EditText
+                        android:id="@+id/provinciaCorreos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Provincia"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="0.55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pais"/>
+                    <EditText
+                        android:id="@+id/paisCorreos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pais"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Codigo Postal"/>
+                    <EditText
+                        android:id="@+id/codigoPostalCorreos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Codigo Postal"/>
+                </LinearLayout>
+        </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    <Button
+        android:id="@+id/siguienteCarritoButton"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="@color/toolbarBackground"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="SIGUIENTE"
+        android:textStyle="bold"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
